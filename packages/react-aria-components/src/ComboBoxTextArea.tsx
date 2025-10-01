@@ -19,7 +19,7 @@ import {filterDOMProps, useResizeObserver} from '@react-aria/utils';
 import {FormContext} from './Form';
 import {forwardRefType, GlobalDOMAttributes, RefObject} from '@react-types/shared';
 import {GroupContext} from './Group';
-import {InputContext} from './Input';
+import {TextAreaContext} from './TextArea';
 import {LabelContext} from './Label';
 import {ListBoxContext, ListStateContext} from './ListBox';
 import {OverlayTriggerStateContext} from './Dialog';
@@ -94,7 +94,7 @@ export const ComboBox = /*#__PURE__*/ (forwardRef as forwardRefType)(function Co
 });
 
 // Contexts to clear inside the popover.
-const CLEAR_CONTEXTS = [LabelContext, ButtonContext, InputContext, GroupContext, TextContext];
+const CLEAR_CONTEXTS = [LabelContext, ButtonContext, TextAreaContext, GroupContext, TextContext];
 
 interface ComboBoxInnerProps<T extends object> {
   props: ComboBoxProps<T>,
@@ -126,7 +126,7 @@ function ComboBoxInner<T extends object>({props, collection, comboBoxRef: ref}: 
   });
 
   let buttonRef = useRef<HTMLButtonElement>(null);
-  let inputRef = useRef<HTMLInputElement>(null);
+  let inputRef = useRef<HTMLTextAreaElement>(null);
   let listBoxRef = useRef<HTMLDivElement>(null);
   let popoverRef = useRef<HTMLDivElement>(null);
   let [labelRef, label] = useSlot(
@@ -191,7 +191,7 @@ function ComboBoxInner<T extends object>({props, collection, comboBoxRef: ref}: 
         [ComboBoxStateContext, state],
         [LabelContext, {...labelProps, ref: labelRef}],
         [ButtonContext, {...buttonProps, ref: buttonRef, isPressed: state.isOpen}],
-        [InputContext, {...inputProps, ref: inputRef}],
+        [TextAreaContext, {...inputProps, ref: inputRef}],
         [OverlayTriggerStateContext, state],
         [PopoverContext, {
           ref: popoverRef,
