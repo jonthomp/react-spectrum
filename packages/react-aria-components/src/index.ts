@@ -30,6 +30,7 @@ export {ColorSwatchPicker, ColorSwatchPickerItem, ColorSwatchPickerContext} from
 export {ColorThumb} from './ColorThumb';
 export {ColorWheel, ColorWheelTrack, ColorWheelTrackContext, ColorWheelStateContext} from './ColorWheel';
 export {ComboBox, ComboBoxContext, ComboBoxStateContext} from './ComboBox';
+export {ComboBox as ComboBoxTextarea, ComboBoxContext as ComboBoxTextareaContext, ComboBoxStateContext as ComboBoxTextareaStateContext} from './ComboBoxTextarea';
 export {composeRenderProps, DEFAULT_SLOT, Provider, useContextProps, useRenderProps, useSlottedContext} from './utils';
 export {DateField, DateInput, DateSegment, TimeField, DateFieldContext, TimeFieldContext, DateFieldStateContext, TimeFieldStateContext} from './DateField';
 export {DatePicker, DateRangePicker, DatePickerContext, DateRangePickerContext, DatePickerStateContext, DateRangePickerStateContext} from './DatePicker';
@@ -101,6 +102,7 @@ export type {ColorThumbProps, ColorThumbRenderProps} from './ColorThumb';
 export type {ColorPickerProps, ColorPickerRenderProps} from './ColorPicker';
 export type {ColorWheelProps, ColorWheelRenderProps, ColorWheelTrackProps, ColorWheelTrackRenderProps} from './ColorWheel';
 export type {ComboBoxProps, ComboBoxRenderProps} from './ComboBox';
+export type {ComboBoxProps as ComboBoxTextareaProps, ComboBoxRenderProps as ComboBoxTextareaRenderProps} from './ComboBoxTextarea';
 export type {DateFieldProps, DateFieldRenderProps, DateInputProps, DateInputRenderProps, DateSegmentProps, DateSegmentRenderProps, TimeFieldProps} from './DateField';
 export type {DatePickerProps, DatePickerRenderProps, DateRangePickerProps, DateRangePickerRenderProps} from './DatePicker';
 export type {DialogProps, DialogTriggerProps, DialogRenderProps} from './Dialog';
